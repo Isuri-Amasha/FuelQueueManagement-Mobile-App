@@ -19,12 +19,12 @@
         >
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0">
@@ -41,9 +41,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="2dp"
                     android:text="@string/station_location"
-                    android:textSize="23dp"
                     android:textColor="@color/orange"
-                    android:textStyle="bold"/>
+                    android:textSize="23dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/locationName"
@@ -69,16 +69,16 @@
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="10dp"
                     android:background="@color/orange1"
+                    android:gravity="center"
                     android:paddingStart="20dp"
                     android:paddingTop="5dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="5dp"
                     android:text="@string/petrol"
                     android:textAlignment="center"
-                    android:gravity="center"
-                    android:textSize="18dp"
                     android:textColor="@color/white"
-                    android:textStyle="bold"/>
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/dieselAvailability"
@@ -87,35 +87,50 @@
                     android:layout_marginStart="5dp"
                     android:layout_marginBottom="10dp"
                     android:background="@color/orange1"
-                   android:gravity="center"
+                    android:gravity="center"
                     android:paddingStart="20dp"
                     android:paddingTop="5dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="5dp"
                     android:text="@string/diesel"
-                    android:textSize="18dp"
                     android:textColor="@color/white"
-                    android:textStyle="bold"/>
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/aroowBtn"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/orangecard"
-            android:backgroundTintMode="add"
-            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"
+<!--        <Button-->
+<!--            android:id="@+id/aroowBtn"-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:backgroundTint="@color/orangecard"-->
+<!--            android:backgroundTintMode="add"-->
+<!--            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_24"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.492" />-->
+
+        <TextView
+            android:id="@+id/stationUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/station_location"
+            android:textColor="@color/orangecard"
+            android:textSize="20dp"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.492" />
+            app:layout_constraintVertical_bias="1.0" />
 
-<!--        <ImageButton-->
+        <!--        <ImageButton-->
 <!--            android:id="@+id/imageButton"-->
 <!--            android:layout_width="100dp"-->
 <!--            android:layout_height="80dp"-->

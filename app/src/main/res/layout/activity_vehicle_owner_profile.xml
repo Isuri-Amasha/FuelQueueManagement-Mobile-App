@@ -32,15 +32,15 @@
                 android:id="@+id/regImg"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="10dp"
                 android:contentDescription="@string/img_content_login"
                 android:src="@drawable/my_profile" />
 
             <TextView
                 android:id="@+id/vOwnerLabel"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginBottom="3dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:text="Vehicle Owner Name"
                 android:textSize="23dp"
@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:minHeight="48dp"
+                android:minHeight="38dp"
                 android:padding="1dp"
                 android:layout_marginLeft="3dp"
                 android:textSize="20dp"
@@ -65,8 +65,8 @@
             <TextView
                 android:id="@+id/vNoLabel"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginBottom="3dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:layout_marginLeft="3dp"
                 android:text="@string/v_no"
@@ -83,7 +83,7 @@
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/grey"
-                android:minHeight="48dp"
+                android:minHeight="38dp"
                 android:padding="3dp"
                 android:layout_marginLeft="3dp"
                 tools:ignore="DuplicateSpeakableTextCheck" />
@@ -91,8 +91,8 @@
             <TextView
                 android:id="@+id/vFuelTypeLabel"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginBottom="3dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:layout_marginLeft="3dp"
                 android:padding="1dp"
@@ -101,18 +101,32 @@
                 android:textStyle="bold"
                 android:textSize="23dp" />
 
+<!--            <EditText-->
+<!--                android:id="@+id/edtFuelType"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="6dp"-->
+<!--                android:textSize="20dp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/grey"-->
+<!--                android:layout_marginLeft="3dp"-->
+<!--                android:minHeight="38dp"-->
+<!--                android:padding="3dp"-->
+<!--                tools:ignore="DuplicateSpeakableTextCheck"-->
+<!--                 />-->
+
             <EditText
-                android:id="@+id/fuelType"
+                android:id="@+id/fuelTy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp"
+                android:layout_marginBottom="8dp"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/grey"
-                android:layout_marginLeft="3dp"
-                android:minHeight="48dp"
+                android:minHeight="38dp"
                 android:padding="3dp"
-                 />
+                android:layout_marginLeft="3dp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <Button
                 android:id="@+id/editVehicleOwner"
@@ -125,7 +139,20 @@
                 android:layout_marginBottom="10dp"
                 android:text="@string/edit_profile"
                 android:textSize="18dp"
-                tools:ignore="DuplicateSpeakableTextCheck" />
+                />
+
+            <TextView
+                android:id="@+id/oId"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="3dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="3dp"
+                android:padding="1dp"
+                android:textColor="@color/white"
+                android:text="@string/label_fuel_type"
+                android:textStyle="bold"
+                android:textSize="3dp" />
 
 
         </LinearLayout>

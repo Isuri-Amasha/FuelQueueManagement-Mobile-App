@@ -52,9 +52,6 @@ public class RegisterStation extends AppCompatActivity {
         regStationRePassword = (EditText) findViewById(R.id.regStationRePassword);
         textView2 = (TextView) findViewById(R.id.textView2);
 
-        //getting the value of role from the splash screen
-        Intent result = getIntent();
-        Integer newrole = result.getIntExtra("role",0);
 
         //spannable string
         String text = "Already have an account? Login";
@@ -103,7 +100,6 @@ public class RegisterStation extends AppCompatActivity {
         String password = regStationPassword.getText().toString();
         String repassword = regStationRePassword.getText().toString();
 
-//        role = "1";
 
         //if any input fields are empty
         if(username.equals("") || stationAddress.equals("") || stationEmail.equals("") || password.equals("") || repassword.equals("")){
@@ -131,7 +127,8 @@ public class RegisterStation extends AppCompatActivity {
 
                         postData.put("stationName",username);
                         postData.put("address",stationAddress);
-                        postData.put("email",stationEmail);
+                        postData.put("username",stationEmail);
+
 
                     }catch(Exception e){
                         e.printStackTrace();
@@ -166,7 +163,7 @@ public class RegisterStation extends AppCompatActivity {
                         //display a success toast
                         Toast.makeText(getApplicationContext(), "Successfully Registered", Toast.LENGTH_SHORT).show();
                         //move to the Login Page
-                        Intent intent = new Intent(RegisterStation.this, MainActivity2.class);
+                        Intent intent = new Intent(RegisterStation.this, Login.class);
                         startActivity(intent);
                     }
                     else {

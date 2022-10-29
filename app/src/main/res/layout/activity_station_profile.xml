@@ -73,7 +73,7 @@
                     android:layout_marginBottom="4dp"
                     android:textColor="@color/grey"
                     android:textStyle="bold"
-                    android:textSize="25dp"
+                    android:textSize="23dp"
                     />
 
             </LinearLayout>
@@ -102,7 +102,7 @@
                     android:inputType="textPostalAddress"
                     android:textColor="@color/grey"
                     android:textStyle="bold"
-                    android:textSize="25dp"
+                    android:textSize="23dp"
                     />
 
             </LinearLayout>
@@ -131,7 +131,25 @@
                     android:layout_marginBottom="4dp"
                     android:textColor="@color/grey"
                     android:textStyle="bold"
-                    android:textSize="25dp"
+                    android:textSize="23dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/stationsid"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginBottom="1dp"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    android:textSize="2dp"
                     />
             </LinearLayout>
 <!--            <LinearLayout-->
@@ -162,7 +180,7 @@
                 android:layout_width="300dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:textStyle="bold"
                 android:backgroundTint="@color/orange1"
                 android:layout_marginBottom="10dp"

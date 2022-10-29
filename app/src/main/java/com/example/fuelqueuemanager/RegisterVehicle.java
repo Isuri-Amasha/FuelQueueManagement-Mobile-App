@@ -27,6 +27,9 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import DBhelper.dbhelper;
 
 public class RegisterVehicle extends AppCompatActivity {
@@ -36,6 +39,8 @@ public class RegisterVehicle extends AppCompatActivity {
     String role;
     dbhelper mydb;
     TextView textView2;
+    List<String> items;
+    String item;
     Spinner spinnerFuelType;
     String[] name = {"Petrol","Diesel"};
     String BaseURL = "https://fuelmanagementsystem.azurewebsites.net/";
@@ -54,9 +59,27 @@ public class RegisterVehicle extends AppCompatActivity {
         textView2 = (TextView) findViewById(R.id.textView2);
         spinnerFuelType = (Spinner) findViewById(R.id.spinnerFuelType);
 
-        //getting the value of role from the splash screen
-        Intent result = getIntent();
-        Integer newrole = result.getIntExtra("role",0);
+        items = new ArrayList<>();
+
+        items.add("Petrol");
+        items.add("Desel");
+
+        spinnerFuelType.setAdapter(new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,items));
+
+        spinnerFuelType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                item = items.get(i);
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
 
         //spannable string
         String text = "Already have an account? Login";
@@ -89,15 +112,13 @@ public class RegisterVehicle extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-//                Toast.makeText(getApplicationContext(), "Vehicle Registered", Toast.LENGTH_LONG).show();
                 //calling method to submit the form
                 submitForm(view);
 
-//                Intent intent = new Intent(RegisterVehicle.this, MainActivity2.class);
-//                startActivity(intent);
             }
         });
     }
+
 
     //method to submit the form
     public void submitForm(View view){
@@ -108,22 +129,12 @@ public class RegisterVehicle extends AppCompatActivity {
         String ownerEmail = regVOwnerEmail.getText().toString();
         String password = regVOwnerPassword.getText().toString();
         String repassword = regVOwnerRePassword.getText().toString();
-        String fuelType = spinnerFuelType.toString();
+        String fuelType = item;
 
-
-        Integer fuel;
-
-        //convert the fuel types
-        if(fuelType == "Petrol"){
-             fuel = 0;
-        }else {
-             fuel = 1;
-        }
-
-//        role = "0";
+        System.out.println("Fuel Type is" +item);
 
         //if any input fields are empty
-        if(username.equals("") || vehicleNo.equals("") || ownerEmail.equals("") || password.equals("") || repassword.equals("")){
+        if(username.equals("") || vehicleNo.equals("") || ownerEmail.equals("") || password.equals("") || repassword.equals("") || fuelType.equals("")){
 
             //display an error toast message
             Toast.makeText(getApplicationContext(), "Please Fill All the Fields", Toast.LENGTH_SHORT).show();
@@ -141,16 +152,17 @@ public class RegisterVehicle extends AppCompatActivity {
                 if(userCheckResult == false){
 
                     //insert the data
-                    String postURL = BaseURL+"VehicleOwner/AddNewVehicalOwner";
+                    String postURL = "https://fuelmanagementsystem.azurewebsites.net/VehicleOwner/AddNewVehicalOwner";
                     RequestQueue requestQueue = Volley.newRequestQueue(this);
                     JSONObject postData = new JSONObject();
 
                     try{
-
+                        postData.put("username",ownerEmail);
                         postData.put("ownerName",username);
-                        postData.put("ownerEmail",ownerEmail);
-                        postData.put("fuelType",fuel);
+
+                        postData.put("fuelType",fuelType);
                         postData.put("vehicalNo",vehicleNo);
+                        System.out.println("Object IS"+postData);
 
 
                     }catch(Exception e){
@@ -163,6 +175,7 @@ public class RegisterVehicle extends AppCompatActivity {
                                 @Override
                                 public void onResponse(JSONObject response) {
                                     System.out.println("----------------response------------------"+response);
+
                                 }
                             }, new Response.ErrorListener() {
 

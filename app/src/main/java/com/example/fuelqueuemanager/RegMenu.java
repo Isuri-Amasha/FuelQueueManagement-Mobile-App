@@ -16,7 +16,6 @@ public class RegMenu extends AppCompatActivity {
 
     Animation topAnim,bottomAnim;
 
-
     ImageView splash1;
     TextView topicFuel;
     TextView statementFuel;
@@ -38,6 +37,7 @@ public class RegMenu extends AppCompatActivity {
         topicFuel = findViewById(R.id.topicFuel);
         statementFuel = findViewById(R.id.statementFuel);
 
+        //setting the animations
         splash1.setAnimation(topAnim);
         topicFuel.setAnimation(bottomAnim);
         statementFuel.setAnimation(bottomAnim);
@@ -53,9 +53,7 @@ public class RegMenu extends AppCompatActivity {
             public void onClick(View view) {
 
                 //move to the register vehicle form
-                String role = "1";
                 Intent intent = new Intent(RegMenu.this, RegisterVehicle.class);
-                intent.putExtra("role",role);
                 startActivity(intent);
             }
         });
@@ -65,9 +63,7 @@ public class RegMenu extends AppCompatActivity {
             public void onClick(View view) {
 
                 //move to the register station form
-                String role = "0";
                 Intent intent = new Intent(RegMenu.this, RegisterStation.class);
-                intent.putExtra("role",role);
                 startActivity(intent);
             }
         });

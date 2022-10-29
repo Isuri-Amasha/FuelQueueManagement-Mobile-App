@@ -97,9 +97,6 @@ public class dbhelper extends SQLiteOpenHelper {
 
         if (cursor.getCount() > 0) {
 
-//            Cursor cursorRole = myDB.rawQuery("select role from users where username = ?", new String[]{username});
-//            String userRole = String.valueOf(cursorRole);
-//            return userRole;
             return true;
         }
         else {
@@ -114,9 +111,6 @@ public class dbhelper extends SQLiteOpenHelper {
 
         if (cursor.getCount() > 0) {
 
-//            Cursor cursorRole = myDB.rawQuery("select role from users where username = ?", new String[]{username});
-//            String userRole = String.valueOf(cursorRole);
-//            return userRole;
             return true;
         }
         else {
@@ -132,9 +126,6 @@ public class dbhelper extends SQLiteOpenHelper {
         Log.i("UserName of this user is", "getUser: "+user);
         return user;
 
-//        String userRole = String.valueOf(cursorRole);
-//        return userRole;
-
     }
 
 
@@ -145,33 +136,20 @@ public class dbhelper extends SQLiteOpenHelper {
         Log.i("UserRole", "getRole: "+userRole);
         return cursorRole;
 
-//        String userRole = String.valueOf(cursorRole);
-//        return userRole;
-
     }
 
 
     public String getUsername(String username){
         SQLiteDatabase myDB = this.getWritableDatabase();
         String user = String.valueOf(myDB.rawQuery("select username from usersNew where username = ?", new String[]{username}));
-//        String userRole = String.valueOf(cursorRole);
-//        Log.i("UserRole", "getRole: "+userRole);
         return user;
 
-//        String userRole = String.valueOf(cursorRole);
-//        return userRole;
 
     }
 
 
 
-//    public Cursor getUserDetails(String username){
-//
-//        SQLiteDatabase myDB = this.getWritableDatabase();
-//        Cursor userDetails = myDB.rawQuery("select * from usersNew where username = ?", new String[]{username});
-//        Log.i("UserRole", "getUser: "+userDetails);
-//        return userDetails;
-//    }
+
 
 
 

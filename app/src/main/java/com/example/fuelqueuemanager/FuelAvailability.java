@@ -38,26 +38,23 @@ public class FuelAvailability extends AppCompatActivity {
         arriveBtn = (Button) findViewById(R.id.arriveBtn);
         finishBtn = (Button) findViewById(R.id.finishBtn);
 
-        String Amount = "200L";
-
-        edtAmount.setText(Amount);
 
         mydb = new dbhelper(this);
 
         //getting the fuel type
         Intent result = getIntent();
-
         Integer btnCheck = result.getIntExtra("btn",0);
+        String userName = result.getStringExtra("user");
 
-        //assign the fuel type
-        if(btnCheck == 1){
-
-            fuelType.setText("Petrol");
-
-        }else{
-
-            fuelType.setText("Diesel");
-        }
+//        //assign the fuel type
+//        if(btnCheck == 1){
+//
+//            fuelType.setText("Diesel");
+//
+//        }else{
+//
+//            fuelType.setText("Petrol");
+//        }
 
         //on click event for the arrive button
         arriveBtn.setOnClickListener(new View.OnClickListener() {
@@ -71,7 +68,7 @@ public class FuelAvailability extends AppCompatActivity {
             }
         });
 
-        //on click event for the arrive button
+        //on click event for the finish button
         finishBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

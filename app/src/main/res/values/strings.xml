@@ -46,6 +46,7 @@
     <string name="f_finished">Fuel Finished</string>
     <string name="fuel_status_label">Fuel Status</string>
     <string name="average_waiting_time">Average Waiting Time</string>
+    <string name="fueled_vehicles">Total Fueled Vehicles</string>
     <string name="avg_wt_time_label">Average Waiting Time</string>
     <string name="petrol">Petrol</string>
     <string name="diesel">Diesel</string>
@@ -56,6 +57,8 @@
     <string name="avg_waiting_time">00:00</string>
     <string name="station_location">Location</string>
     <string name="update_your_status">Update Your Status</string>
+    <string name="petrol_queue">Petrol Queue</string>
+    <string name="desel_queue">Desel Queue</string>
     <string name="check_out">Check Out</string>
     <string name="check_in">Check In</string>
     <string name="hint_fuel_type">Fuel Type</string>

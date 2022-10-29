@@ -5,6 +5,7 @@ public class Owner {
     String username;
     String vehicleNo;
     String fuelType;
+    String ownerId;
 
     public Owner() {
     }
@@ -17,6 +18,14 @@ public class Owner {
 
     public String getUsername() {
         return username;
+    }
+
+    public String getOwnerId() {
+        return ownerId;
+    }
+
+    public void setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
     }
 
     public void setUsername(String username) {

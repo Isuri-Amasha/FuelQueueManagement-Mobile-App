@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import DBhelper.dbhelper;
 
-public class Login extends AppCompatActivity {
+public class LoginStation extends AppCompatActivity {
 
     Button login;
     EditText username, password;
@@ -49,8 +49,6 @@ public class Login extends AppCompatActivity {
                     //check for the credentials
                     Boolean credResult = mydb.checkCredentials(userName,Password);
 
-                    System.out.println("User Credentials are"+credResult);
-
                     //if credentials match
                     if (credResult == true){
 
@@ -58,20 +56,16 @@ public class Login extends AppCompatActivity {
                         System.out.println("Username of the Station"+userName);
 
                         //Move to the station Main Page
-                            Intent intent;
-                            intent = new Intent(Login.this, StationOwnerMain .class);
-                            intent.putExtra("user",userName);
-                            startActivity(intent);
+                        Intent intent;
+                        intent = new Intent(LoginStation.this, StationOwnerMain .class);
+                        intent.putExtra("user",userName);
+                        startActivity(intent);
 
                     }
                     else {
 
-//                        display password does not match message
+                        //display password does not match message
                         Toast.makeText(getApplicationContext(), "Your Password Does Not Match", Toast.LENGTH_LONG).show();
-//                        Intent intent;
-//                        intent = new Intent(Login.this, StationOwnerMain .class);
-//                        intent.putExtra("user",userName);
-//                        startActivity(intent);
 
                     }
 
