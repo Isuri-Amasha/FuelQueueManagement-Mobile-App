@@ -8,11 +8,6 @@
     android:orientation="vertical"
     tools:context=".StationProfile">
 
-
-
-
-
-
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"

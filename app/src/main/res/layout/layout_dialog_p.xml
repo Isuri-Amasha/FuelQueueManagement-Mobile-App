@@ -17,7 +17,6 @@
         android:gravity="center"
         />
 
-
     <Button
         android:id="@+id/btnYesP"
         android:layout_width="150dp"

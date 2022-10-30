@@ -7,9 +7,4 @@
         android:duration = "2000"
         />
 
-<!--    <alpha-->
-<!--        android:formAlpha = "0.1"-->
-<!--        android:toAlpha="1.0"-->
-<!--        android:duration = "1500"-->
-<!--        />-->
 </set>

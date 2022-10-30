@@ -8,7 +8,6 @@
     android:orientation="vertical"
     tools:context=".RegisterVehicle">
 
-
     <ScrollView
         android:id="@+id/RegScroll"
         android:layout_width="match_parent"

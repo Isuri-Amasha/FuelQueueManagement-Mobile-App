@@ -9,8 +9,6 @@
     tools:context=".VehicleOwnerProfile">
 
 
-
-
         <LinearLayout
             android:id="@+id/InnerLayout"
             android:layout_width="match_parent"
