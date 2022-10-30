@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import DBhelper.dbhelper;
 
+//login file
 public class Login extends AppCompatActivity {
 
     Button login;
@@ -62,6 +63,10 @@ public class Login extends AppCompatActivity {
                             intent = new Intent(Login.this, StationOwnerMain .class);
                             intent.putExtra("user",userName);
                             startActivity(intent);
+
+                        System.out.println("Sending User Name Is" + userName);
+
+                        startActivity(intent);
 
                     }
                     else {

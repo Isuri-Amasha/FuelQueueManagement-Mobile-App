@@ -9,6 +9,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+//splash screen
 public class SplashScreen extends AppCompatActivity {
 
     Animation topAnim,bottomAnim;

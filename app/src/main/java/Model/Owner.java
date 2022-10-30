@@ -1,5 +1,6 @@
 package Model;
 
+//owner class
 public class Owner {
 
     String username;

@@ -1,5 +1,6 @@
 package com.example.fuelqueuemanager;
 
+//station owner class
 public class StationOwner {
 
     String address;

@@ -32,6 +32,7 @@ import java.util.List;
 
 import DBhelper.dbhelper;
 
+//register vehicle
 public class RegisterVehicle extends AppCompatActivity {
 
     Button regVehicleButton;

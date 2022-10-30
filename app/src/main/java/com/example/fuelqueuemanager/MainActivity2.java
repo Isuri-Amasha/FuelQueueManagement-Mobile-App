@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import DBhelper.dbhelper;
 
+//main activity2
 public class MainActivity2 extends AppCompatActivity {
 
     Button login;

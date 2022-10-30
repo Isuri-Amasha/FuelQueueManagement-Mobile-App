@@ -17,6 +17,7 @@ import java.util.List;
 
 import Model.Station;
 
+//adapter file
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
 
     LayoutInflater inflater;

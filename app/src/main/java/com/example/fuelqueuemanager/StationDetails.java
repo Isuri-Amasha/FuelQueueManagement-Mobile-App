@@ -30,6 +30,7 @@ import java.util.List;
 
 import Model.Station;
 
+//station details
 public class StationDetails extends AppCompatActivity {
 
     TextView stationName,stationAddress,waitingTime,petrolAvailability,dieselAvailability,petrolVehiclesNum,dieselVehiclesNum,fueledVehicleLabel;

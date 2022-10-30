@@ -30,6 +30,7 @@ import DBhelper.dbhelper;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+//register station
 public class RegisterStation extends AppCompatActivity {
 
     Button regStationButton;

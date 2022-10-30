@@ -16,7 +16,7 @@
     <string name="station_email">Station Email</string>
     <string name="hint_phone">Phone number</string>
     <string name="hint_station_address">Enter Station Address</string>
-    <string name="hint_waiting_time">00 : 00</string>
+    <string name="hint_waiting_time">00</string>
     <string name="station_address">Station Address</string>
     <string name="fuel_amount">Amount</string>
     <string name="station_password">Station Password</string>
